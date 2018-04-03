@@ -876,9 +876,14 @@ extension TIGPlayerWideControlView: TIGPlayerCustom {
             }
             self.stockAreaView.sliderPoint(sender: self.stockAreaButton)
             self.playerControlButton.setBackGroundToReplay()
-            //self.shareButton.display(parentViewAlpha: 0.8, replayViewhidden: !self.showShareButton)
-            self.shareButton.display(parentViewAlpha: 0.8, replayViewhidden: false)
             self.player(player, showLoading: false)
+            if !self.isProgressSliderSliding || self.didProgressGetToEnd(slider: self.timeSlider){
+                //クイズ結果
+                let quizResultView = Bundle(for: QuizResultView.self).loadNibNamed(String(describing: QuizResultView.self), owner: self, options: nil)?.last as? QuizResultView
+                quizResultView!.frame = self.frame
+                self.addSubview(quizResultView!)
+                self.bringSubview(toFront: quizResultView!)
+            }
         case .pause:
             TIGNotification.post(TIGNotification.stop)
             self.shareButton.display(parentViewAlpha: 1.0, replayViewhidden: true)

@@ -13,8 +13,7 @@
     "ios": "9.0"
   },
   "source": {
-    "git": "https://github.com/PARONYM/tig_ios.git",
-    "tag": "0.9.30"
+    "path": "."
   },
   "source_files": [
     "TIGPlayer/Core/*",

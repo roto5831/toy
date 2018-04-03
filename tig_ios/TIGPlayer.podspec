@@ -66,7 +66,8 @@ Pod::Spec.new do |s|
   #  Specify the location from where the source should be retrieved.
   #  Supports git, hg, bzr, svn and HTTP.
   #
-  s.source       = { :git => "https://github.com/PARONYM/tig_ios.git", :tag => s.version.to_s}
+  # s.source       = { :git => "https://github.com/PARONYM/tig_ios.git", :tag => s.version.to_s}
+  s.source       = { :path => '.' }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
