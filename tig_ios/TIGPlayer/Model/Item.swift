@@ -231,6 +231,9 @@ open class Item: Mappable {
     /// stockした時間
     open var stockTime = "00:00:00"
 
+    /// 正解か不正解か
+    open var correct = false
+    
     /// initializer
     convenience required public init?(map: Map) {
         self.init()

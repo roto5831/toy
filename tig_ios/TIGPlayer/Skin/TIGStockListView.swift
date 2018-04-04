@@ -52,14 +52,20 @@ class TIGStockListView: UITableView,UITableViewDelegate,UITableViewDataSource {
         tigNotification.observe(TIGNotification.stock) { _ in
             self.addStockList()
         }
-        
+        self.initializeItems()
+    }
+
+    func initializeItems(){
         if let currentContent = PersistentManager.getFirst(CurrentContent.self){
             if let items =  PersistentManager.getByPrimaryKey(Items.self, primaryKey: currentContent.contentsId){
                 box = items.populate()
+            }else{
+                box = [Item]()
+                self.reloadData()
             }
         }
     }
-
+    
     /// stockListに追加
     func addStockList() {
         if let currentContent = PersistentManager.getFirst(CurrentContent.self){

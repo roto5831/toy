@@ -33,6 +33,9 @@ open class CurrentContent:PM,Mappable{
     /// contents動画プレビュー画像
     open dynamic var videoShotPrev = ""
     
+    ///一回でも全問正解したかどうか（クイズ形式の場合のみ使用）
+    open dynamic var allCorrectAtLeastOnce = false
+    
     /// initializer
     convenience required public init?(map: Map) {
         self.init()

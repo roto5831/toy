@@ -74,6 +74,8 @@ open class TIGPlayerWideControlView: UIView{
     /// ストックエリア
     @IBOutlet weak var stockAreaView:TIGStockView!
     
+    @IBOutlet weak var stockListView: TIGStockListView!
+    
     /// loading
     @IBOutlet weak var loading: TIGPlayerLoading!
     @IBOutlet weak var modeButton: TIGPlayerModeButton!
@@ -843,6 +845,7 @@ extension TIGPlayerWideControlView: TIGPlayerCustom {
         case .readyToPlay:
             switch player.previousState {
             case .unknown:
+                print("unknown")
                 self.renderView?.adjustSizeToVideoLayer()
                 if let contentsId = player.contentsId{
                     self.bind(contentsId: contentsId)
@@ -877,12 +880,16 @@ extension TIGPlayerWideControlView: TIGPlayerCustom {
             self.stockAreaView.sliderPoint(sender: self.stockAreaButton)
             self.playerControlButton.setBackGroundToReplay()
             self.player(player, showLoading: false)
+            //stop何回も呼ばれるからしょうがなくこの条件・・
             if !self.isProgressSliderSliding || self.didProgressGetToEnd(slider: self.timeSlider){
-                //クイズ結果
-                let quizResultView = Bundle(for: QuizResultView.self).loadNibNamed(String(describing: QuizResultView.self), owner: self, options: nil)?.last as? QuizResultView
-                quizResultView!.frame = self.frame
-                self.addSubview(quizResultView!)
-                self.bringSubview(toFront: quizResultView!)
+                //クイズ結果 FactoryClass現在再生されているコンテンツに基づいてビューを生成
+                //分岐を制御するクラスは別に作成
+                if let quizResultView = Bundle(for: QuizResultView.self).loadNibNamed(String(describing: QuizResultView.self), owner: self, options: nil)?.last as? QuizResultView{
+                    quizResultView.frame = self.frame
+                    quizResultView.comp = self
+                    self.addSubview(quizResultView)
+                    self.bringSubview(toFront: quizResultView)
+                }
             }
         case .pause:
             TIGNotification.post(TIGNotification.stop)
@@ -1170,6 +1177,15 @@ extension TIGPlayerWideControlView:TIGStockViewDelegate{
                     
             })
         }
+    }
+}
+
+// MARK: - QuizResultViewComplement
+extension TIGPlayerWideControlView:QuizResultViewComplement{
+    
+    public func didClose() {
+        //stockAraのアイテムを初期化
+        self.stockListView.initializeItems()
     }
 }
 
