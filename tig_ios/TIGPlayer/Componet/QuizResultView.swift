@@ -21,7 +21,9 @@ open class QuizResultView: UIView {
                 self.box = items.populate()
                 if self.isAllCorrenct{
                     if let currentContent = self.currentContent{
-                        currentContent.allCorrectAtLeastOnce = true
+                        PersistentManager.update(currentContent){
+                            currentContent.allCorrectAtLeastOnce = true
+                        }
                     }
                 }
             }
@@ -30,7 +32,7 @@ open class QuizResultView: UIView {
     
     var box = [Item]()
     
-    var comp:QuizResultViewComplement?
+    weak var comp:QuizResultViewComplement?
     
     override open func awakeFromNib() {
         self.build()
@@ -48,14 +50,15 @@ open class QuizResultView: UIView {
     }
     
     var isAllCorrenct:Bool{
+        //TODO コンテンツリストが持っている正解リストと照らし合せる
         guard self.box.count != 0 else{
             return false
         }
         var allCorrect = true
         self.box.forEach{ item in
-            if !item.correct{
-               allCorrect = false
-            }
+//            if !item.correct{
+//               allCorrect = false
+//            }
         }
         return allCorrect
     }

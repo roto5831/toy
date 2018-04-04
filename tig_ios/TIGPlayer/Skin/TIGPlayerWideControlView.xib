@@ -185,6 +185,7 @@
                 <outlet property="progressView" destination="hQE-RR-3tG" id="yPA-1a-bFD"/>
                 <outlet property="stockAreaButton" destination="23c-wu-uOU" id="2pp-nd-NMI"/>
                 <outlet property="stockAreaView" destination="T7y-ID-viW" id="Pd2-hH-WRy"/>
+                <outlet property="stockListView" destination="Qp6-2f-Sce" id="3sX-nP-FhD"/>
                 <outlet property="timeLabel" destination="FJM-T1-mP9" id="CYB-83-SjY"/>
                 <outlet property="timeSlider" destination="zy8-jJ-r8D" id="J1g-4g-U69"/>
                 <outlet property="titleLabel" destination="XOv-TU-6cf" id="Zjq-or-a2K"/>
