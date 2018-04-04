@@ -14,6 +14,8 @@ public protocol QuizResultViewComplement:class{
 
 open class QuizResultView: UIView {
     
+    weak var comp:QuizResultViewComplement?
+    
     var currentContent:CurrentContent?
     var items:Items?{
         didSet{
@@ -31,8 +33,6 @@ open class QuizResultView: UIView {
     }
     
     var box = [Item]()
-    
-    weak var comp:QuizResultViewComplement?
     
     override open func awakeFromNib() {
         self.build()
@@ -54,13 +54,10 @@ open class QuizResultView: UIView {
         guard self.box.count != 0 else{
             return false
         }
-        var allCorrect = true
-        self.box.forEach{ item in
-//            if !item.correct{
-//               allCorrect = false
-//            }
-        }
-        return allCorrect
+        //コンテンツリストが持っている
+        let answers = ["","","",""]
+        let pickedItems = self.box.map{$0.itemId}
+        return  answers.elementsEqual(pickedItems)
     }
     
     @IBAction func test(_ sender: Any) {

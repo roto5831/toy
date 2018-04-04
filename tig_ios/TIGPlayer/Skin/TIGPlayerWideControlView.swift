@@ -883,13 +883,11 @@ extension TIGPlayerWideControlView: TIGPlayerCustom {
             //stop何回も呼ばれるからしょうがなくこの条件・・
             if !self.isProgressSliderSliding || self.didProgressGetToEnd(slider: self.timeSlider){
                 //クイズ結果 FactoryClass現在再生されているコンテンツに基づいてビューを生成
-                //分岐を制御するクラスは別に作成
-                if let quizResultView = Bundle(for: QuizResultView.self).loadNibNamed(String(describing: QuizResultView.self), owner: self, options: nil)?.last as? QuizResultView{
-                    quizResultView.frame = self.frame
-                    quizResultView.comp = self
-                    self.addSubview(quizResultView)
-                    self.bringSubview(toFront: quizResultView)
-                }
+                let factory = ContentsResultFactory()
+                let view = factory.create(type:contentsType.quiz,parentView:self)
+                view.frame = self.frame
+                self.addSubview(view)
+                self.bringSubview(toFront: view)
             }
         case .pause:
             TIGNotification.post(TIGNotification.stop)

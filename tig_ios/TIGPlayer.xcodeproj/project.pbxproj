@@ -42,6 +42,7 @@
 		4175A6321EFBD03900FD211A /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4175A6311EFBD03900FD211A /* DeviceInfo.swift */; };
 		417F5A7D1F0DF35400AF2BE7 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417F5A7C1F0DF35400AF2BE7 /* Content.swift */; };
 		41907C8D1F2AC06100339ABA /* TIGAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41907C8C1F2AC06100339ABA /* TIGAnalytics.swift */; };
+		41908C5C2074A5200098E81D /* ContentsResultFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41908C5B2074A5200098E81D /* ContentsResultFactory.swift */; };
 		41980EA11F21BF4200635EF5 /* TIGStockButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41980EA01F21BF4200635EF5 /* TIGStockButton.swift */; };
 		419B83051F84AFBB00CDD7DF /* DictonaryUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419B83041F84AFBB00CDD7DF /* DictonaryUtil.swift */; };
 		41A6E76F1F209227005DF934 /* TIGPlayerModeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A6E76E1F209227005DF934 /* TIGPlayerModeButton.swift */; };
@@ -107,6 +108,7 @@
 		417C6E451F85DA2600D7A02E /* MetaPageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetaPageManager.swift; sourceTree = "<group>"; };
 		417F5A7C1F0DF35400AF2BE7 /* Content.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		41907C8C1F2AC06100339ABA /* TIGAnalytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TIGAnalytics.swift; sourceTree = "<group>"; };
+		41908C5B2074A5200098E81D /* ContentsResultFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsResultFactory.swift; sourceTree = "<group>"; };
 		41980EA01F21BF4200635EF5 /* TIGStockButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TIGStockButton.swift; sourceTree = "<group>"; };
 		419B83041F84AFBB00CDD7DF /* DictonaryUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictonaryUtil.swift; sourceTree = "<group>"; };
 		41A6E76E1F209227005DF934 /* TIGPlayerModeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TIGPlayerModeButton.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				954064091E75506C00947B16 /* TIGPlayerWipeContainerRootViewController.xib */,
 				9540640B1E75506C00947B16 /* TIGPlayerLoading.swift */,
 				4894B42A1FBEF1AF00C58F17 /* TIGPlayerShareButton.swift */,
+				41908C5B2074A5200098E81D /* ContentsResultFactory.swift */,
 			);
 			name = Componet;
 			path = ../Componet;
@@ -562,6 +565,7 @@
 				4175A6321EFBD03900FD211A /* DeviceInfo.swift in Sources */,
 				95A829F21EEAAC7800E42FD6 /* TIGGradientColor.swift in Sources */,
 				95B3BC531EA74F4400754B56 /* TIGObjectView.swift in Sources */,
+				41908C5C2074A5200098E81D /* ContentsResultFactory.swift in Sources */,
 				481A91391F7A01C40051122E /* TIGPlayerSDK.swift in Sources */,
 				954064261E75506C00947B16 /* TIGPlayer.swift in Sources */,
 				95FD4E691ED41F38007ABF87 /* TIGLog.swift in Sources */,
