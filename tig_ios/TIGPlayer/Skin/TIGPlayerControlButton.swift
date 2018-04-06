@@ -55,7 +55,7 @@ open class TIGPlayerControlButton: UIButton{
     }
 
     /// リプレイ
-    private func replay(){
+    open func replay(){
         self.setBackGroundToStop()
         self.player?.seek(to: 0.0)
         self.player?.play()

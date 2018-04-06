@@ -219,6 +219,26 @@ class ContentsListViewController: UIViewController ,UIPageViewControllerDataSour
     /// View の表示が完了
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        if let currentContent =
+            PersistentManager.getByPrimaryKey(
+                CurrentContent.self,
+                primaryKey:PersistentManager.PersistentCosnt.PrimaryKey.CurrentContent.rawValue
+            ){
+            //TODO contentがクイズだったらアイテム全削除
+            let type = contentsType.quiz
+            if type == contentsType.quiz{
+                if let items = PersistentManager.getByPrimaryKey(Items.self, primaryKey: currentContent.contentsId){
+                    for item in (items.list) {
+                        PersistentManager.delete(ItemModel.self, primaryKey: "\(currentContent.contentsId)\(item.itemId)")
+                    }
+                    PersistentManager.delete(Items.self, primaryKey: currentContent.contentsId)
+                }else{
+                    self.box.removeAll()
+                }
+                self.itemCollectionView.reloadData()
+            }
+            
+        }
     }
     
     /// View の非表示が完了

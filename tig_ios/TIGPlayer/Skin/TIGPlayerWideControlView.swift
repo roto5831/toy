@@ -888,11 +888,6 @@ extension TIGPlayerWideControlView: TIGPlayerCustom {
                 view.frame = self.frame
                 self.addSubview(view)
                 self.bringSubview(toFront: view)
-//                let ctr = QuizResultViewController()
-//                ctr.view.frame = self.frame
-//                let topCtr = UIApplication.shared.keyWindow?.rootViewController?.presentedViewController
-//                topCtr?.present(ctr, animated: false, completion: nil)
-                
             }
         case .pause:
             TIGNotification.post(TIGNotification.stop)
@@ -1189,6 +1184,7 @@ extension TIGPlayerWideControlView:QuizResultViewComplement{
     public func didClose() {
         //stockAraのアイテムを初期化
         self.stockListView.initializeItems()
+        self.playerControlButton.replay()
     }
 }
 

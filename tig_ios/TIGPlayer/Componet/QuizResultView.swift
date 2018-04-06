@@ -43,13 +43,16 @@ open class QuizResultView: UIView {
             self.items = PersistentManager.getByPrimaryKey(Items.self, primaryKey: currentContent.contentsId)
             if let items = self.items{
                 self.box = items.populate()
-                if self.isAllCorrenct{
-                    if let currentContent = self.currentContent{
-                        PersistentManager.update(currentContent){
-                            currentContent.allCorrectAtLeastOnce = true
-                        }
-                    }
+            }
+            if self.isAllCorrenct{
+                PersistentManager.update(currentContent){
+                    currentContent.allCorrectAtLeastOnce = true
                 }
+                self.instructorImage.image = UIImage(named: "correct", in: Bundle(for:QuizResultView.self), compatibleWith: nil)
+                self.resultDescription.text = "わー！よくできました！たのんだものをすべてみつけてきてくれたわね。ありがとう！"
+            }else{
+                self.instructorImage.image = UIImage(named: "wrong", in: Bundle(for:QuizResultView.self), compatibleWith: nil)
+                self.resultDescription.text = "あらら。。たのんだものとなにかがちがうきが…つぎはがんばりましょう。"
             }
             self.collectedView.register(UINib(nibName: "CollectedCell", bundle:Bundle(for: type(of: self))), forCellWithReuseIdentifier: "CollectedCell")
             self.collectedView.delegate = self
@@ -63,9 +66,9 @@ open class QuizResultView: UIView {
             return false
         }
         //コンテンツリストが持っている
-        let answers = ["","","",""]
+        let answers = ["4","5"]
         let pickedItems = self.box.map{$0.itemId}
-        return  answers.elementsEqual(pickedItems)
+        return answers.elementsEqual(pickedItems.sorted())
     }
     
     @IBAction func test(_ sender: Any) {
@@ -90,7 +93,7 @@ extension QuizResultView:UICollectionViewDataSource{
     }
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return self.box.count
     }
 }
 
@@ -100,6 +103,7 @@ extension QuizResultView:UICollectionViewDelegate{
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         // get a reference to our storyboard cell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectedCell", for: indexPath as IndexPath) as! CollectedCell
+        cell.item.sd_setImage(with: URL(string: self.box[indexPath.row].itemThumbnailURL))
         return cell
     }
 }
