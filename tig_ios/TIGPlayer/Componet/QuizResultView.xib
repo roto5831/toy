@@ -47,7 +47,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" red="0.94952808094437402" green="1" blue="0.37523206936954068" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="1" green="0.95169272023333329" blue="0.4687662820416667" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="collectedView" destination="xC7-J5-8kO" id="npA-nb-dF7"/>
                 <outlet property="instructorImage" destination="gYt-d1-auk" id="C2g-xt-4hE"/>

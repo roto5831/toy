@@ -90,9 +90,9 @@
 		95B112801E66AAC300379B50 /* MediaItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaItem.swift; sourceTree = "<group>"; };
 		95B112811E66AAC300379B50 /* MediaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaManager.swift; sourceTree = "<group>"; };
 		95E8677A1ECD32A5009C6066 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		A41A75A51FCA40D8002389EB /* Tutorial03.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tutorial03.mp4; sourceTree = "<group>"; };
-		A41A75A61FCA40D8002389EB /* Tutorial02.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tutorial02.mp4; sourceTree = "<group>"; };
-		A41A75A71FCA40D9002389EB /* Tutorial01.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tutorial01.mp4; sourceTree = "<group>"; };
+		A41A75A51FCA40D8002389EB /* Tutorial03.mp4 */ = {isa = PBXFileReference; lastKnownFileType = text; path = Tutorial03.mp4; sourceTree = "<group>"; };
+		A41A75A61FCA40D8002389EB /* Tutorial02.mp4 */ = {isa = PBXFileReference; lastKnownFileType = text; path = Tutorial02.mp4; sourceTree = "<group>"; };
+		A41A75A71FCA40D9002389EB /* Tutorial01.mp4 */ = {isa = PBXFileReference; lastKnownFileType = text; path = Tutorial01.mp4; sourceTree = "<group>"; };
 		A41DA80B1FC4E0740062C039 /* TutorialFirstPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialFirstPageViewController.swift; sourceTree = "<group>"; };
 		A499CCE91FC6FDEF00D596B8 /* SideMenuViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SideMenuViewController.storyboard; sourceTree = "<group>"; };
 		C662A0351ED2C3F5000BEBCE /* StockItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockItemCell.swift; sourceTree = "<group>"; };

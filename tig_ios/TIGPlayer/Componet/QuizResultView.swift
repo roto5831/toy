@@ -51,6 +51,9 @@ open class QuizResultView: UIView {
                     }
                 }
             }
+            self.collectedView.register(UINib(nibName: "CollectedCell", bundle:Bundle(for: type(of: self))), forCellWithReuseIdentifier: "CollectedCell")
+            self.collectedView.delegate = self
+            self.collectedView.dataSource = self
         }
     }
     
@@ -79,5 +82,27 @@ open class QuizResultView: UIView {
         self.removeFromSuperview()
     }
 }
+
+extension QuizResultView:UICollectionViewDataSource{
+    
+    public func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+}
+
+extension QuizResultView:UICollectionViewDelegate{
+    
+    //     make a cell for each cell index path
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        // get a reference to our storyboard cell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectedCell", for: indexPath as IndexPath) as! CollectedCell
+        return cell
+    }
+}
+
 
 
