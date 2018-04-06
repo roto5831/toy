@@ -6,11 +6,19 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		WthfEs4TENslYIqyMM8urB8JNoc=
+		r6mamjE/ZyrhF5qhKlsBSxFMGPg=
+		</data>
+		<key>Cell.nib</key>
+		<data>
+		2/tLejaqLnkRwE+3f/08n+DKJJ8=
+		</data>
+		<key>CollectedCell.nib</key>
+		<data>
+		XXKWQbo6qs177oRtNtBVia0+SUQ=
 		</data>
 		<key>Headers/TIGPlayer-Swift.h</key>
 		<data>
-		oRekWWiq9/pspFyGpVX6j+dFGTE=
+		4DUtLjKbrehb+UUKnS1iVM6o0y0=
 		</data>
 		<key>Headers/TIGPlayer.h</key>
 		<data>
@@ -22,11 +30,11 @@
 		</data>
 		<key>Modules/TIGPlayer.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		tlROv+/HRdGl9R0G91SWsJn7oF0=
+		Fe3L+c3ZEW+JwW3AOyW4GatFFsw=
 		</data>
 		<key>Modules/TIGPlayer.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		mj7Sv5G63hY3t504z8GjeYlKAQ0=
+		hI2wv7sRXjbJLdtssc4lpCkBiiE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -34,19 +42,19 @@
 		</data>
 		<key>QuizResultView.nib</key>
 		<data>
-		AykSLMh6rRBwDtHYClqX9ebF2fE=
+		GZMUF0CRB8NboqXcBNoaY3YZLpI=
 		</data>
 		<key>TIGPlayerWideControlView.nib</key>
 		<data>
-		r3Bn3oM+coa0K3lAGYAOpYlPp58=
+		9q9IfffHCBmOiHBFSyM55cYzVKc=
 		</data>
 		<key>TIGPlayerWipeContainerRootViewController.nib</key>
 		<data>
-		XilnYy3TkpS8Ml0HiXoKH+SXOAg=
+		UPQUeTFd5bRW5ZO0B53BxVOKqUw=
 		</data>
 		<key>TIGPlayerWipeView.nib</key>
 		<data>
-		PUG0P7DkCsbl82CiIi2M0KDXbjA=
+		rugV7PO8FKx98fZv3DEISGpLjDY=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -55,22 +63,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			WthfEs4TENslYIqyMM8urB8JNoc=
+			r6mamjE/ZyrhF5qhKlsBSxFMGPg=
 			</data>
 			<key>hash2</key>
 			<data>
-			4bNDTISfQZgXiJONe2kUXB5vHmGtPAR0CTTYw4OMRQQ=
+			EAR382idSt77hY+0UnUJ/t/dnwQ4U6wN1L8hSySfffY=
+			</data>
+		</dict>
+		<key>Cell.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			2/tLejaqLnkRwE+3f/08n+DKJJ8=
+			</data>
+			<key>hash2</key>
+			<data>
+			JlMIJh6TCCg4Yx6Pe3U9UnsNee2uCCEro3irYOaC6lg=
+			</data>
+		</dict>
+		<key>CollectedCell.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			XXKWQbo6qs177oRtNtBVia0+SUQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			FMjYyHQeKI8HjB9LoOZuPlNAPXizs+6WQ2a95SeGKOs=
 			</data>
 		</dict>
 		<key>Headers/TIGPlayer-Swift.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			oRekWWiq9/pspFyGpVX6j+dFGTE=
+			4DUtLjKbrehb+UUKnS1iVM6o0y0=
 			</data>
 			<key>hash2</key>
 			<data>
-			GY4FjEtsWMLtONSaMmbSq5g62YT17CFtfFqQ2usxhoc=
+			Aw6NTadBo3clP2ukLP2TRrIc8yMoo5Kvpx3dARty4yI=
 			</data>
 		</dict>
 		<key>Headers/TIGPlayer.h</key>
@@ -88,22 +118,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			tlROv+/HRdGl9R0G91SWsJn7oF0=
+			Fe3L+c3ZEW+JwW3AOyW4GatFFsw=
 			</data>
 			<key>hash2</key>
 			<data>
-			lahVLMawTESjsRH6761pTJjei0Heuxb6KH4SPHSyjZI=
+			8A4BOfIO7EO92pc805KZ0NuGS9W24/ozBQDckUFFvSg=
 			</data>
 		</dict>
 		<key>Modules/TIGPlayer.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			mj7Sv5G63hY3t504z8GjeYlKAQ0=
+			hI2wv7sRXjbJLdtssc4lpCkBiiE=
 			</data>
 			<key>hash2</key>
 			<data>
-			6B7+pR8pFmd5R7DXcwBJGy77yo2pSE44fAzSAXdNNxQ=
+			2X4Hi+5+CzOsA1IK+9XED2xSUbQurgbpVNRVxDUIAjw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -121,44 +151,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			AykSLMh6rRBwDtHYClqX9ebF2fE=
+			GZMUF0CRB8NboqXcBNoaY3YZLpI=
 			</data>
 			<key>hash2</key>
 			<data>
-			p/Pyb7QnEINnJqqA1xV4wWDNd4W8lCMPd43B3u0taIM=
+			dapFj7oXUE0Idoiw5BtKRIzD+CWvLOBK58RYKVx5pfY=
 			</data>
 		</dict>
 		<key>TIGPlayerWideControlView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			r3Bn3oM+coa0K3lAGYAOpYlPp58=
+			9q9IfffHCBmOiHBFSyM55cYzVKc=
 			</data>
 			<key>hash2</key>
 			<data>
-			E01cpZC21RR+i2G6VXF7g9bImLpZ/9ko6appooCRZzs=
+			gMMxrpk03Ldq1INm26CI/03hxFAs73Fd5w5bdu5QT28=
 			</data>
 		</dict>
 		<key>TIGPlayerWipeContainerRootViewController.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			XilnYy3TkpS8Ml0HiXoKH+SXOAg=
+			UPQUeTFd5bRW5ZO0B53BxVOKqUw=
 			</data>
 			<key>hash2</key>
 			<data>
-			yjlBGAqo+Cap0G+RYffy7vXFmMKlpbVhTWXaxwHIRqk=
+			/sMXCjoVSD0Epm3jfXp3er6SDX7i2PN0jytFktrHomQ=
 			</data>
 		</dict>
 		<key>TIGPlayerWipeView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			PUG0P7DkCsbl82CiIi2M0KDXbjA=
+			rugV7PO8FKx98fZv3DEISGpLjDY=
 			</data>
 			<key>hash2</key>
 			<data>
-			9KAA5FEh756f8Ii+MLPYPTrJkWDHSuTmK7lnrcaK4rI=
+			IzS59vhtJAcEPBVJLNr3rBfGZmigLuov/UzJS2BnKgM=
 			</data>
 		</dict>
 	</dict>

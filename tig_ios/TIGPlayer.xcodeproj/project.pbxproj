@@ -47,6 +47,8 @@
 		419B83051F84AFBB00CDD7DF /* DictonaryUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419B83041F84AFBB00CDD7DF /* DictonaryUtil.swift */; };
 		41A6E76F1F209227005DF934 /* TIGPlayerModeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A6E76E1F209227005DF934 /* TIGPlayerModeButton.swift */; };
 		41BDDD2D2072229200E4EDC7 /* QuizResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BDDD2C2072229200E4EDC7 /* QuizResultViewController.swift */; };
+		41C4755A20760B7100C910E9 /* CollectedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41C4755920760B7100C910E9 /* CollectedCell.xib */; };
+		41C4755C2076231100C910E9 /* CollectedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C4755B2076231100C910E9 /* CollectedCell.swift */; };
 		41F5C1861ECC4A910048D9AB /* PersistentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F5C1851ECC4A910048D9AB /* PersistentManager.swift */; };
 		41F5C1881ECC4A9F0048D9AB /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F5C1871ECC4A9F0048D9AB /* Mode.swift */; };
 		41FC22F21EE7905C00401F68 /* ArrayUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FC22F11EE7905C00401F68 /* ArrayUtil.swift */; };
@@ -113,6 +115,8 @@
 		419B83041F84AFBB00CDD7DF /* DictonaryUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictonaryUtil.swift; sourceTree = "<group>"; };
 		41A6E76E1F209227005DF934 /* TIGPlayerModeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TIGPlayerModeButton.swift; sourceTree = "<group>"; };
 		41BDDD2C2072229200E4EDC7 /* QuizResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResultViewController.swift; sourceTree = "<group>"; };
+		41C4755920760B7100C910E9 /* CollectedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectedCell.xib; sourceTree = "<group>"; };
+		41C4755B2076231100C910E9 /* CollectedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectedCell.swift; sourceTree = "<group>"; };
 		41F5C1851ECC4A910048D9AB /* PersistentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentManager.swift; sourceTree = "<group>"; };
 		41F5C1871ECC4A9F0048D9AB /* Mode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mode.swift; sourceTree = "<group>"; };
 		41FC22F11EE7905C00401F68 /* ArrayUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayUtil.swift; sourceTree = "<group>"; };
@@ -216,6 +220,8 @@
 			isa = PBXGroup;
 			children = (
 				4163156C2071D07600B7FF0E /* QuizResultView.xib */,
+				41C4755920760B7100C910E9 /* CollectedCell.xib */,
+				41C4755B2076231100C910E9 /* CollectedCell.swift */,
 				4163156E2071D17A00B7FF0E /* QuizResultView.swift */,
 				41BDDD2C2072229200E4EDC7 /* QuizResultViewController.swift */,
 				954064071E75506C00947B16 /* TIGPlayerWipeContainer.swift */,
@@ -464,6 +470,7 @@
 				24D576E11F6B7C600002F5AB /* TIGPlayer.xcassets in Resources */,
 				4163156D2071D07600B7FF0E /* QuizResultView.xib in Resources */,
 				954064301E75506C00947B16 /* TIGPlayerWipeView.xib in Resources */,
+				41C4755A20760B7100C910E9 /* CollectedCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,6 +548,7 @@
 				954064351E75506C00947B16 /* TIGPlayerUtils.swift in Sources */,
 				95CE20821E95E16F002673D2 /* TIGConstants.swift in Sources */,
 				951C6E8E1EDD5AFB00BBB99C /* TIGPlayerControlBar.swift in Sources */,
+				41C4755C2076231100C910E9 /* CollectedCell.swift in Sources */,
 				954064321E75506C00947B16 /* AVPlayer+TIGPlayer.swift in Sources */,
 				4894B42B1FBEF1AF00C58F17 /* TIGPlayerShareButton.swift in Sources */,
 				417F5A7D1F0DF35400AF2BE7 /* Content.swift in Sources */,

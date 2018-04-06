@@ -173,9 +173,9 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 #if __has_feature(modules)
 @import AVFoundation;
-@import RealmSwift;
 @import UIKit;
 @import CoreGraphics;
+@import RealmSwift;
 @import ObjectiveC;
 @import QuartzCore;
 @import Foundation;
@@ -193,6 +193,15 @@ SWIFT_MODULE_NAMESPACE_PUSH("TIGPlayer")
 
 
 
+
+@class NSCoder;
+
+SWIFT_CLASS("_TtC9TIGPlayer13CollectedCell")
+@interface CollectedCell : UICollectionViewCell
+- (void)awakeFromNib;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
 
 @class RLMRealm;
 @class RLMObjectSchema;
@@ -215,6 +224,8 @@ SWIFT_CLASS("_TtC9TIGPlayer14CurrentContent")
 @property (nonatomic, copy) NSString * _Nonnull videoUrl;
 /// contents動画プレビュー画像
 @property (nonatomic, copy) NSString * _Nonnull videoShotPrev;
+/// 一回でも全問正解したかどうか（クイズ形式の場合のみ使用）
+@property (nonatomic) BOOL allCorrectAtLeastOnce;
 /// PrimaryKeyの列名
 ///
 /// returns:
@@ -298,10 +309,10 @@ SWIFT_CLASS("_TtC9TIGPlayer5Items")
 - (nonnull instancetype)initWithValue:(id _Nonnull)value schema:(RLMSchema * _Nonnull)schema OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class NSCoder;
 
 SWIFT_CLASS("_TtC9TIGPlayer14QuizResultView")
 @interface QuizResultView : UIView
+- (void)awakeFromNib;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -712,6 +723,11 @@ SWIFT_CLASS("_TtC9TIGPlayer24TIGPlayerWideControlView")
 @end
 
 
+
+
+@interface TIGPlayerWideControlView (SWIFT_EXTENSION(TIGPlayer))
+- (void)didClose;
+@end
 
 
 

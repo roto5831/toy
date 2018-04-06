@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 public protocol QuizResultViewComplement:class{
     func didClose()
@@ -14,23 +15,17 @@ public protocol QuizResultViewComplement:class{
 
 open class QuizResultView: UIView {
     
+    @IBOutlet weak var collectedView: UICollectionView!
+    
+    @IBOutlet weak var resultDescription: UITextView!
+    
+    @IBOutlet weak var instructorImage: UIImageView!
+    
     weak var comp:QuizResultViewComplement?
     
     var currentContent:CurrentContent?
-    var items:Items?{
-        didSet{
-            if let items = items{
-                self.box = items.populate()
-                if self.isAllCorrenct{
-                    if let currentContent = self.currentContent{
-                        PersistentManager.update(currentContent){
-                            currentContent.allCorrectAtLeastOnce = true
-                        }
-                    }
-                }
-            }
-        }
-    }
+    
+    var items:Items?
     
     var box = [Item]()
     
@@ -46,6 +41,16 @@ open class QuizResultView: UIView {
             )
         if let currentContent = self.currentContent{
             self.items = PersistentManager.getByPrimaryKey(Items.self, primaryKey: currentContent.contentsId)
+            if let items = self.items{
+                self.box = items.populate()
+                if self.isAllCorrenct{
+                    if let currentContent = self.currentContent{
+                        PersistentManager.update(currentContent){
+                            currentContent.allCorrectAtLeastOnce = true
+                        }
+                    }
+                }
+            }
         }
     }
     
@@ -74,3 +79,5 @@ open class QuizResultView: UIView {
         self.removeFromSuperview()
     }
 }
+
+
