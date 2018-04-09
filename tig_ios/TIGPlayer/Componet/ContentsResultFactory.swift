@@ -17,19 +17,17 @@ public enum contentsType{
 
 open class ContentsResultFactory{
     
-    open func create(type:contentsType,parentView:UIView) -> UIView{
+    open func create(type:contentsType,parentView:UIView) -> UIViewController{
         switch type{
         case .quiz:
-            if let quizResultView = Bundle(for: QuizResultView.self).loadNibNamed(String(describing: QuizResultView.self), owner: parentView, options: nil)?.last as? QuizResultView{
-                if let comp = parentView as? QuizResultViewComplement{
-                    quizResultView.comp = comp
-                }
-                return quizResultView
-            }else{
-                return UIView()
+            let ctr = QuizResultViewController()
+            ctr.view.frame = parentView.frame
+            if let comp = parentView as? QuizResultViewComplement{
+                ctr.comp = comp
             }
+            return ctr
         default:
-            return UIView()
+            return UIViewController()
         }
     }
 }
