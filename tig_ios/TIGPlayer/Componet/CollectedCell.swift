@@ -10,7 +10,11 @@ import UIKit
 
 open class CollectedCell: UICollectionViewCell {
     
-    @IBOutlet weak var item: UIImageView!
+    @IBOutlet weak var item: UIImageView!{
+        didSet{
+            item.frame.size = CGSize(width: 50, height: 50)
+        }
+    }
     
     override open func awakeFromNib() {
         super.awakeFromNib()
