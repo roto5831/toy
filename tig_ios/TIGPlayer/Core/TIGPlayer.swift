@@ -597,7 +597,7 @@ open class TIGPlayer: NSObject, UIWebViewDelegate {
     /// 停止&解放
     open func stopAndRelease(){
         let lastState = self.state
-        self.state = .stopped
+//        self.state = .stopped
 
         self.myWebView.removeFromSuperview()
         self.webViewNaviBar.removeFromSuperview()

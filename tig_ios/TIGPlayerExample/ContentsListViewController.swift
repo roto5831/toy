@@ -204,21 +204,6 @@ class ContentsListViewController: UIViewController ,UIPageViewControllerDataSour
             return
         }
         self.loadCurrentPage(content:contentsList[self.pageNumber])
-    }
-    
-    /// layout処理終了
-    override func viewDidLayoutSubviews() {
-        NSLog("----viewDidLayoutSubviews内----")
-        self.playButton.center = self.dlView.center
-        self.adjustGoLeftRightBtnsPositions()
-        self.toggleBackScreen(self.deleteMode)
-        self.showOrHideStockArea()
-        self.view.layoutIfNeeded()
-    }
-    
-    /// View の表示が完了
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
         if let currentContent =
             PersistentManager.getByPrimaryKey(
                 CurrentContent.self,
@@ -232,18 +217,21 @@ class ContentsListViewController: UIViewController ,UIPageViewControllerDataSour
                         PersistentManager.delete(ItemModel.self, primaryKey: "\(currentContent.contentsId)\(item.itemId)")
                     }
                     PersistentManager.delete(Items.self, primaryKey: currentContent.contentsId)
-                }else{
-                    self.box.removeAll()
                 }
+                self.box.removeAll()
                 self.itemCollectionView.reloadData()
             }
-            
         }
     }
     
-    /// View の非表示が完了
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
+    /// layout処理終了
+    override func viewDidLayoutSubviews() {
+        NSLog("----viewDidLayoutSubviews内----")
+        self.playButton.center = self.dlView.center
+        self.adjustGoLeftRightBtnsPositions()
+        self.toggleBackScreen(self.deleteMode)
+        self.showOrHideStockArea()
+        self.view.layoutIfNeeded()
     }
     
     /// コンテンツリスト取得

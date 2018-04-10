@@ -170,6 +170,9 @@ open class TIGPlayerWideControlView: UIView{
     
     var initTigMode = false
     
+    //コンテンツ毎に動画再生後の結果を生成
+    let factory = ContentsResultFactory()
+    
     /// モードのセットアップ
     private func setupTigMode() {
         if tigMode == 0 {
@@ -811,6 +814,12 @@ extension TIGPlayerWideControlView: TIGPlayerCustom {
         let currentProgress = NSDecimalNumber(string: String(round(slider.value)))
         return maximumProgress == currentProgress
     }
+    
+    public func didProgressGetToEndPrecisely(slider:UISlider) ->Bool{
+        let maximumProgress = NSDecimalNumber(string: String(round(slider.maximumValue)))
+        let currentProgress = NSDecimalNumber(string: String(round(slider.value + 0.3)))
+        return maximumProgress == currentProgress
+    }
 
 
     /// playerのDisplayModeが変化した際に呼ばれる　現状は何もしていない
@@ -880,14 +889,11 @@ extension TIGPlayerWideControlView: TIGPlayerCustom {
             self.stockAreaView.sliderPoint(sender: self.stockAreaButton)
             self.playerControlButton.setBackGroundToReplay()
             self.player(player, showLoading: false)
-            //stop何回も呼ばれるからしょうがなくこの条件・・
-            if !self.isProgressSliderSliding || self.didProgressGetToEnd(slider: self.timeSlider){
-                //クイズ結果 FactoryClass現在再生されているコンテンツに基づいてビューを生成
-                let factory = ContentsResultFactory()
-                let ctr = factory.create(type:contentsType.quiz,parentView:self)
-                let topCtr = UIApplication.shared.keyWindow?.rootViewController?.presentedViewController
-                topCtr?.present(ctr, animated: false, completion: nil)
-            }
+            
+            //結果画面出力
+            let ctr = self.factory.create(type:contentsType.quiz,parentView:self)
+            let topCtr = UIApplication.shared.keyWindow?.rootViewController?.presentedViewController
+            topCtr?.present(ctr, animated: false, completion: nil)
         case .pause:
             TIGNotification.post(TIGNotification.stop)
             self.shareButton.display(parentViewAlpha: 1.0, replayViewhidden: true)

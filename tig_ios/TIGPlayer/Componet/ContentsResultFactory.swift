@@ -10,11 +10,11 @@ import Foundation
 import UIKit
 
 public enum contentsType{
-    case quiz
     case tig
+    case quiz
     case visualDictionary
 }
-
+///現在再生されているコンテンツに基づいてコントローラーを生成
 open class ContentsResultFactory{
     
     open func create(type:contentsType,parentView:UIView) -> UIViewController{
